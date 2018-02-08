@@ -1,0 +1,5 @@
+<!--pages/welcome/welcome.wxml-->
+
+<view class="container">
+    <img src="../../images/readbook.jpeg" />
+</view>
