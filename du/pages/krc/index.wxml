@@ -1,0 +1,43 @@
+<!--pages/krc/index.wxml-->
+
+
+<view class="container">
+  <view class="wordContainer" id="word">
+
+    <block wx:for="{{title.da}}" wx:for-item="line" wx:for-index="lidx">
+      <view class="text {{title.css}}">
+        <block wx:for="{{line}}" wx:for-item="w">
+          <view class="{{w[3]}}" wx:if="{{w[1]!=''}}">
+            <text wx:if="{{w[2]!=''}}" class="pinyin gres_{{wcss[w[0]]}}">{{w[2]}}</text>
+            <text class="hanz gres_{{wcss[w[0]]}}">{{w[1]}}</text>
+          </view>
+        </block>
+      </view>
+    </block>
+
+    <block wx:for="{{author.da}}" wx:for-item="line" wx:for-index="lidx">
+      <view class="text {{author.css}}">
+        <block wx:for="{{line}}" wx:for-item="w">
+          <view class="{{w[3]}}" wx:if="{{w[1]!=''}}">
+            <text wx:if="{{w[2]!=''}}" class="pinyin gres_{{wcss[w[0]]}}">{{w[2]}}</text>
+            <text class="hanz gres_{{wcss[w[0]]}}">{{w[1]}}</text>
+          </view>
+        </block>
+      </view>
+    </block>
+
+    <block wx:for="{{wordLines.da}}" wx:for-item="line" wx:for-index="lidx">
+      <view class="text {{wordLines.css}}">
+        <block wx:for="{{line}}" wx:for-item="w" wx:for-index="idx">
+          <view class="{{w[3]}}" wx:if="{{w[1]!=''}}">
+            <text wx:if="{{w[2]!=''}}" class="pinyin gres_{{wcss[w[0]]}}">{{w[2]}}</text>
+            <text class="hanz gres_{{wcss[w[0]]}}">{{w[1]}}</text>
+          </view>
+        </block>
+      </view>
+    </block>
+
+  </view>
+
+  <view>{{ssss}}</view>
+</view>

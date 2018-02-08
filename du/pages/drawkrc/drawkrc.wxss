@@ -1,0 +1,59 @@
+/* pages/drawkrc/drawkrc.wxss */
+
+.box {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: center;
+  margin: 5px;
+  padding: 5px;
+  -webkit-user-select: none;
+}
+
+.box:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 0 5px #646464;
+  cursor: pointer;
+}
+
+.box:hover .ctrl {
+  display: block;
+}
+
+.text {
+  position: relative;
+  top: 8px;
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: center;
+  font: normal normal bold 60px 微软雅黑, sans-serif;
+  -webkit-filter: brightness(2);
+}
+
+.text p {
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%),
+                -webkit-linear-gradient(left, #f00 0%, #00f 0%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /*-webkit-text-stroke:1px #f00;*/
+  -webkit-filter: drop-shadow(0px 0px 1px #f00);
+}
+
+.ctrl {
+  position: relative;
+  top: 25px;
+  height: 20px;
+  background: #0aa;
+  display: -webkit-box;
+  -webkit-box-shadow: 0 0 5px #646464;
+  display: none;
+  border-radius: 4px;
+}
+
+.ctrl span {
+  padding: 0 10px;
+}
+
+.ctrl span:hover {
+  background: #088;
+  cursor: pointer;
+}

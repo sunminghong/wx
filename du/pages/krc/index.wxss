@@ -1,0 +1,83 @@
+/* pages/krc/index.wxss */
+@import "gres.wxss";
+
+.wordContainer {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: center;
+  margin: 5px;
+  padding: 5px;
+  -webkit-user-select: none;
+}
+
+
+.text {
+  position: relative;
+  top: 8px;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: center;
+  font: normal normal bold 60rpx 微软雅黑, sans-serif;
+  filter: brightness(2);
+}
+
+.title {
+  font: normal normal bold 80rpx sans-serif;
+}
+
+.author {
+  font: normal normal bold 40rpx 微软雅黑, sans-serif;
+  margin-bottom:30rpx;
+}
+
+.text text{
+  background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #f00 0%, #00f 0%);
+
+  -webkit-background-clip:text;
+ -webkit-text-fill-color: transparent;
+
+  /*filter: drop-shadow(0px 0px 1px #f00);
+  -webkit-text-stroke:1px #f00;*/
+}
+
+.text .word {
+    width:90rpx;
+}
+
+.text .linestart{
+    width:38rpx;
+          font-size:30rpx;
+}
+
+.text .stop {
+    width:30rpx;
+  font-size:30rpx;
+}
+
+.text .stop text {
+  padding-left:0rpx;
+  padding-right:0rpx;
+  line-height:90rpx;
+  vertical-align: text-bottom;
+}
+
+.text .word text {
+  display: block;
+  text-align:center;
+  padding-left:4rpx;padding-right:4rpx;
+}
+
+.text .word .pinyin {
+  font: normal normal bold 25rpx sans-serif;
+  /*font-family: 'Times New Roman', Times, serif;
+  filter: drop-shadow(0px 0px 1px #f00);*/
+}
+
+.text .word .hanz {
+  -webkit-text-stroke:1px #f00;
+}
+
+.text .br {
+
+}
+

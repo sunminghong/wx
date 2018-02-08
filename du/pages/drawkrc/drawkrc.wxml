@@ -1,0 +1,9 @@
+<!--pages/drawkrc/drawkrc.wxml-->
+  
+  <view class="container">
+  <view class="box" id="box">
+		<text class="text" id="text">
+		</text>
+
+	</view>	
+</view>

@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/krc/index",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "早起读诗",
+    "navigationBarTextStyle": "black"
+  }
+}

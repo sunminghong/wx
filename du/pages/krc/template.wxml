@@ -1,0 +1,16 @@
+<template name="showLine">
+    <block wx:for="{{da}}" wx:for-item="line" wx:for-index="lidx">
+    <view class="text {{css}}">
+    <block wx:for="{{line}}" wx:for-item="w" wx:for-index="idx">
+      <text class="word pagedata.wcss[lidx][idx]">{{w}}</text>
+    </block>
+    </view>
+    </block>
+</template>
+
+    <template is="showLine" data="{{...title}}" />
+    <template is="showLine" data="{{...author}}" />
+    <template is="showLine" data="{{...wordLines}}" />
+
+
+
