@@ -8,8 +8,8 @@
       <view class="text {{begin.css}}">
         <block wx:for="{{begin.term}}" wx:for-item="w">
           <view class="{{w[3]}}" wx:if="{{w[1]!=''}}">
-            <text wx:if="{{w[2]!=''}}" class="pinyin gres_{{wcss[w[0]]}}">{{w[2]}}</text>
-            <text class="hanz gres_{{wcss[w[0]]}}">{{w[1]}}</text>
+            <text wx:if="{{w[2]!=''}}" class="pinyin {{wcss[w[0]]}}">{{w[2]}}</text>
+            <text class="hanz {{wcss[w[0]]}}">{{w[1]}}</text>
           </view>
         </block>
       </view>
@@ -18,8 +18,8 @@
       <view class="text {{line.css}}">
         <block wx:for="{{line.term}}" wx:for-item="w">
           <view class="{{w[3]}}" wx:if="{{w[1]!=''}}">
-            <text wx:if="{{w[2]!=''}}" class="pinyin gres_{{wcss[w[0]]}}">{{w[2]}}</text>
-            <text class="hanz gres_{{wcss[w[0]]}}">{{w[1]}}</text>
+            <text wx:if="{{w[2]!=''}}" class="pinyin {{wcss[w[0]]}}">{{w[2]}}</text>
+            <text class="hanz {{wcss[w[0]]}}">{{w[1]}}</text>
           </view>
         </block>
       </view>

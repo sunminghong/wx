@@ -20,6 +20,8 @@ class PoetryHelper {
     //每个休止符等于多少个step，默认约16*30 ms，
     this.stopCharStep = 16;
 
+      this._gres_css= "gres_";
+
     this._defaultWordCss = "word";
 
     //存放解析好的文字播放数据
@@ -45,6 +47,7 @@ class PoetryHelper {
     let wh = util.getScreenWH();
     let ww = wh[0];
     let hh = wh[1];
+    let termsPerline = parseInt(ww / 90);
 
     //第多少个字
     let widx = 0;
@@ -55,6 +58,7 @@ class PoetryHelper {
     let wcss = {};
 
 
+
     let defaultParseLine = function (off, line) {
       lineIdx++;
 
@@ -63,6 +67,7 @@ class PoetryHelper {
       let lls = line.split('|');
       let ar = arr[0];
       let ldata = self.ldata;
+      let row = [];
 
       let llslen = lls.length;
       for (let i = 0; i < llslen; i++) {
@@ -101,11 +106,11 @@ class PoetryHelper {
           i++;
         }
 
-        ldata.push(term);
+        row.push(term);
 
         ar.push([term[0], term[1], term[2], css]);
 
-        if ((i * 1 + 1) % 8 == 0) {
+        if ((i * 1 + 1) % termsPerline == 0) {
           arr.push([]);
           ar = arr[arr.length - 1];
           lineIdx++;
@@ -116,12 +121,13 @@ class PoetryHelper {
       }
 
       //每一行结束是否增加一些延时（停顿）。
-      ldata.push([widx, '', '', off, off + self.lineStopStep, lineIdx]);
+      row.push([widx, '', '', off, off + self.lineStopStep, lineIdx]);
       off += self.lineStopStep;
       wcss[widx] = 0;
       //ar.push([widx,'','','linestart']);
       widx++;
 
+      ldata.push(row);
 
       return [off, arr];
     }
@@ -134,25 +140,28 @@ class PoetryHelper {
 
 
 
+    let row = [];
     let ar = [];
     //开头数3、2、1
-    self.ldata.push([widx, '▶︎', '', off, off + self.durPerStep, lineIdx]);
+    row.push([widx, '▶︎', '', off, off + self.durPerStep, lineIdx]);
     off += self.durPerStep;
     wcss[widx] = 0;
     ar.push([widx, '▶︎', '', self._defaultWordCss]);
     widx++;
 
-    self.ldata.push([widx, '▶︎', '', off, off + self.durPerStep, lineIdx]);
+    row.push([widx, '▶︎', '', off, off + self.durPerStep, lineIdx]);
     off += self.durPerStep;
     wcss[widx] = 0;
     ar.push([widx, '▶︎', '', self._defaultWordCss]);
     widx++;
 
-    self.ldata.push([widx, '▶︎', '', off, off + self.durPerStep, lineIdx]);
+    row.push([widx, '▶︎', '', off, off + self.durPerStep, lineIdx]);
     off += self.durPerStep;
     wcss[widx] = 0;
     ar.push([widx, '▶︎', '', self._defaultWordCss]);
     widx++;
+
+    this.ldata.push(row);
 
     let begin = { css: "begin", term: ar }
 
@@ -200,11 +209,15 @@ class PoetryHelper {
     this.durPerStep = durPerStep || this.durPerStep;
     this.cb_finish = cb || this.cb_finish;
 
-    if (this._pIdx && this._pIdx>0)
+    if ((this._pIdx && this._pIdx>0) || (this._lineIdx && this._lineIdx>0))
           this.clearProgress();
 
-    //播放到第几个字了
+    //播放到该行/句第几个字了
     this._pIdx = 0;
+      //播放到第几行了
+    this._lineIdx = 0;
+      //总播放了多少行;
+    this._playLines = 0;
 
     //帧计数
     this._stepCount = 0;
@@ -216,13 +229,13 @@ class PoetryHelper {
   }
 
   _play() {
-    let term = this.ldata[this._pIdx];
+    let term = this.ldata[this._lineIdx][this._pIdx];
     this.termStepCount += 1;
     let termStep = term[4] - term[3];
     let ppp = parseInt(this.termStepCount * 100 / termStep);
 
     //let data = this._getData("wcss");
-    this.wcss[term[0]] = ppp < 20 ? 20 : ppp;
+    this.wcss[term[0]] = this._gres_css + (ppp < 20 ? 20 : ppp);
 
     this._setData({
       wcss: this.wcss 
@@ -232,12 +245,26 @@ class PoetryHelper {
       this.termStepCount = 0;
       this._pIdx++;
 
-      //结束了,回调
-      if (this._pIdx >= this.ldata.length) {
-        clearInterval(this.timer);
-        this.timer = null;
+        //换下一行
+      if (this._pIdx >= this.ldata[this._lineIdx].length) {
+          //如果是跟读模式应该读两遍
+          if (this.ifFollow && this._playLines % 2 == 0) {
+              this._gres_css = "gres_f_";
+          } else {
+              this._lineIdx ++;
+          }
+          
+          this._playLines ++;
+          this._pIdx = 0;
 
-        this.cb_finish();
+
+          //结束了,回调
+          if (this._lineIdx >= this.ldata.length) {
+            clearInterval(this.timer);
+            this.timer = null;
+
+            this.cb_finish();
+          }
       }
     }
   }
