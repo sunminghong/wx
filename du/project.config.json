@@ -31,7 +31,8 @@
 				{
 					"id": -1,
 					"name": "krc",
-					"pathName": "pages/krc/index"
+					"pathName": "pages/krc/index",
+					"query": ""
 				}
 			]
 		}

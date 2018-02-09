@@ -9,7 +9,7 @@ class PoetryHelper {
     this.durPerStep = param.durPerStep;
     this.stepPerLetter = param.stepPerLetter;
     this.pageData = param.pageData;
-    this.setData = param.pageSetDatafn;
+    this._setData = param.fn_pageSetData;
 
     this.cb_show = param.cb_show;
     this.cb_finish = param.cb_finish;
@@ -159,9 +159,16 @@ class PoetryHelper {
     begin.push({ css: "begin", term: ar })
 
 
+    let cou = 1;
+      if (ifFollow) {
+        cou =2;
+      }
+
     for (let i = 0; i < llslen; i++) {
       let line = lls[i];
       if (line == "") continue;
+
+        for (let j=0;j<cou;j++) {
 
       let ret = defaultParseLine(off, line);
       off = ret[0];
@@ -174,13 +181,10 @@ class PoetryHelper {
         for (var jj in ret[1])
           lines.push({ css: "", term: ret[1][jj] });
       }
-
-      if (ifFollow) {
-        i--;
-      }
+        }
     }
 
-    this.setData({
+    this._setData({
       "wcss": wcss
     });
 

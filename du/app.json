@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/krc/index",
     "pages/index/index",
+    "pages/krc/index",
+    "pages/login/index",
     "pages/logs/logs"
   ],
   "window": {
