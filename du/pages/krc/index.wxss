@@ -21,13 +21,12 @@
   filter: brightness(2);
 }
 
-.title {
+.begin {
   font: normal normal bold 80rpx sans-serif;
 }
 
-.author {
-  font: normal normal bold 40rpx 微软雅黑, sans-serif;
-  margin-bottom:30rpx;
+.title {
+  font: normal normal bold 80rpx sans-serif;
 }
 
 .text text{
@@ -42,6 +41,12 @@
 
 .text .word {
     width:90rpx;
+}
+
+.author .word {
+  font: normal normal bold 40rpx 微软雅黑, sans-serif;
+  /*margin-bottom:30rpx;*/
+  width:50rpx;
 }
 
 .text .linestart{

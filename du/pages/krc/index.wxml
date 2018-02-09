@@ -3,29 +3,7 @@
 
 <view class="container">
 
-  <view class="wordContainer">
-
-    <block wx:for="{{title.da}}" wx:for-item="line" wx:for-index="lidx">
-      <view class="text {{title.css}}">
-        <block wx:for="{{line}}" wx:for-item="w">
-          <view class="{{w[3]}}" wx:if="{{w[1]!=''}}">
-            <text wx:if="{{w[2]!=''}}" class="pinyin gres_{{wcss[w[0]]}}">{{w[2]}}</text>
-            <text class="hanz gres_{{wcss[w[0]]}}">{{w[1]}}</text>
-          </view>
-        </block>
-      </view>
-    </block>
-
-    <block wx:for="{{author.da}}" wx:for-item="line" wx:for-index="lidx">
-      <view class="text {{author.css}}">
-        <block wx:for="{{line}}" wx:for-item="w">
-          <view class="{{w[3]}}" wx:if="{{w[1]!=''}}">
-            <text wx:if="{{w[2]!=''}}" class="pinyin gres_{{wcss[w[0]]}}">{{w[2]}}</text>
-            <text class="hanz gres_{{wcss[w[0]]}}">{{w[1]}}</text>
-          </view>
-        </block>
-      </view>
-    </block>
+  <view class="wordContainer" bindtap="startRecord">
 
       <view class="text {{begin.css}}">
         <block wx:for="{{begin.term}}" wx:for-item="w">
@@ -36,10 +14,10 @@
         </block>
       </view>
 
-    <block wx:for="{{wordLines}}" wx:for-item="line" wx:for-index="lidx">
-      <view class="text {line.css}}">
-        <block wx:for="{{line.term}}" wx:for-item="w" wx:for-index="idx">
-          <view class="{{w[3]}} {{w[3]}}" wx:if="{{w[1]!=''}}">
+    <block wx:for="{{wordLines}}" wx:for-item="line">
+      <view class="text {{line.css}}">
+        <block wx:for="{{line.term}}" wx:for-item="w">
+          <view class="{{w[3]}}" wx:if="{{w[1]!=''}}">
             <text wx:if="{{w[2]!=''}}" class="pinyin gres_{{wcss[w[0]]}}">{{w[2]}}</text>
             <text class="hanz gres_{{wcss[w[0]]}}">{{w[1]}}</text>
           </view>
@@ -48,6 +26,9 @@
     </block>
 
   </view>
+
+  
+  <button class="startPlay" type="default" plain="true" bindtap="startRecord"> 开始录音</button>
 
   <view>{{ssss}}</view>
 </view>

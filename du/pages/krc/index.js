@@ -25,7 +25,7 @@ Page({
 
     this.poetry = new poetryhelper.PoetryHelper({
         durPerStep:30,
-        stepPerLette:14,
+        stepPerLetter:14,
         pageData:self.data,
         fn_pageSetData:function(data){self.setData(data)},
         cb_show:self.showPoetry,
@@ -33,7 +33,7 @@ Page({
     });
     
     this.ifFollow = true;
-    this.poetry.parse(classic,self.ifFollow);
+    this.poetry.parse(classic);
 /*
     setTimeout(function(){
         self.setData({
@@ -53,6 +53,10 @@ Page({
             wordLines:lines
         })
     },
+
+  startRecord: function(e) {
+      this.poetry.play(this.ifFollow);
+  },
 
   playFinish: function() {
       console.log('playFinished!!!!!!!!!!');

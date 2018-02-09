@@ -20,6 +20,8 @@ class PoetryHelper {
     //每个休止符等于多少个step，默认约16*30 ms，
     this.stopCharStep = 16;
 
+    this._defaultWordCss = "word";
+
     //存放解析好的文字播放数据
     this.ldata = [];
 
@@ -31,11 +33,10 @@ class PoetryHelper {
     return this.pageData[key];
   }
 
-  //TODO:ifFollow 是否是跟随模式（每句显示两遍）
   //let classic = "春晓\n王维\n春眠不觉晓，\n处处闻啼鸟。\n夜来风雨声，\n花落知多少。";
   //let classic = "春|晓\n王,400|维\n春|眠|不|觉|晓|，\n处|处|闻|啼|鸟|。\n夜|来|风|雨|声|，\n花|落|知|多|少|。";
   //let classic = "春|晓\n作|者|：|王|维\n春|眠|-|不|觉|晓|\n处|处|-|闻|啼|鸟\n夜|来|-|风|雨|声\n花|落|-|知|多|少";
-  parse(classic, ifFollow, cb) {
+  parse(classic, cb) {
     this.cb_show = cb || this.cb_show;
 
     let off = 0;
@@ -68,7 +69,7 @@ class PoetryHelper {
         let w = lls[i];
         if (w == '') continue;
 
-        let css = "word";
+        let css = self._defaultWordCss;
         let term = [];
 
         term = w.split(',');
@@ -128,47 +129,36 @@ class PoetryHelper {
     let lls = classic.split('\n');
     console.log(lls);
 
-    let begin = [];
     let lines = [];
-    let title = [];
-    let author = [];
     let llslen = lls.length;
 
 
 
     let ar = [];
     //开头数3、2、1
-    self.ldata.push([widx, '▶︎▶︎▶︎', '', off, off + self.durPerStep, lineIdx]);
+    self.ldata.push([widx, '▶︎', '', off, off + self.durPerStep, lineIdx]);
     off += self.durPerStep;
     wcss[widx] = 0;
-    ar.push([widx, '▶︎▶︎▶︎', '', 'linestart']);
+    ar.push([widx, '▶︎', '', self._defaultWordCss]);
     widx++;
 
-    self.ldata.push([widx, '▶︎▶︎▶︎', '', off, off + self.durPerStep, lineIdx]);
+    self.ldata.push([widx, '▶︎', '', off, off + self.durPerStep, lineIdx]);
     off += self.durPerStep;
     wcss[widx] = 0;
-    ar.push([widx, '▶︎▶︎▶︎', '', 'linestart']);
+    ar.push([widx, '▶︎', '', self._defaultWordCss]);
     widx++;
 
-    self.ldata.push([widx, '▶︎▶︎▶︎', '', off, off + self.durPerStep, lineIdx]);
+    self.ldata.push([widx, '▶︎', '', off, off + self.durPerStep, lineIdx]);
     off += self.durPerStep;
     wcss[widx] = 0;
-    ar.push([widx, '▶︎▶︎▶︎', '', 'linestart']);
+    ar.push([widx, '▶︎', '', self._defaultWordCss]);
     widx++;
 
-    begin.push({ css: "begin", term: ar })
-
-
-    let cou = 1;
-      if (ifFollow) {
-        cou =2;
-      }
+    let begin = { css: "begin", term: ar }
 
     for (let i = 0; i < llslen; i++) {
       let line = lls[i];
       if (line == "") continue;
-
-        for (let j=0;j<cou;j++) {
 
       let ret = defaultParseLine(off, line);
       off = ret[0];
@@ -181,9 +171,9 @@ class PoetryHelper {
         for (var jj in ret[1])
           lines.push({ css: "", term: ret[1][jj] });
       }
-        }
     }
 
+    this.wcss = wcss;
     this._setData({
       "wcss": wcss
     });
@@ -197,9 +187,21 @@ class PoetryHelper {
   //////////////////////////////////////////////////////////////////////////
 
 
-  play(cb, durPerStep) {
+  //ifFollow 是否是跟随模式（每句显示两遍）
+  play(ifFollow, durPerStep, cb) {
+    if (this.timer) {
+        if (this.durPerStep == durPerStep) {
+            return;
+        }
+        clearInterval(this.timer);
+    }
+
+    this.ifFollow = ifFollow;
     this.durPerStep = durPerStep || this.durPerStep;
     this.cb_finish = cb || this.cb_finish;
+
+    if (this._pIdx && this._pIdx>0)
+          this.clearProgress();
 
     //播放到第几个字了
     this._pIdx = 0;
@@ -213,18 +215,17 @@ class PoetryHelper {
     this.timer = setInterval(function () { self._play() }, this.durPerStep);
   }
 
-
   _play() {
     let term = this.ldata[this._pIdx];
     this.termStepCount += 1;
     let termStep = term[4] - term[3];
     let ppp = parseInt(this.termStepCount * 100 / termStep);
 
-    let data = this._getData("wcss");
-    data[term[0]] = ppp < 20 ? 20 : ppp;
+    //let data = this._getData("wcss");
+    this.wcss[term[0]] = ppp < 20 ? 20 : ppp;
 
-    this.setData({
-      wcss: data
+    this._setData({
+      wcss: this.wcss 
     })
 
     if (this.termStepCount == termStep) {
@@ -241,11 +242,9 @@ class PoetryHelper {
     }
   }
 
-  reStart(durPerStep) {
-    this.durPerStep = durPerStep || this.durPerStep;
-
+  continue() {
+      if (this.timer) return;
     clearInterval(this.timer);
-
     // 启动单个字推进的定时器
     this.timer = setInterval(function () { self._play() }, this, this.durPerStep);
   }
@@ -253,7 +252,16 @@ class PoetryHelper {
 
   pause() {
     clearInterval(this.timer);
+      this.timer = null;
 
+  }
+
+  clearProgress() {
+      let wcss = this.wcss;
+
+      for(let i in wcss) {
+          wcss[i]=0;
+      }
   }
 }
 
