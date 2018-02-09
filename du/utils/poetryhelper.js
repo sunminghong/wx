@@ -252,6 +252,7 @@ class PoetryHelper {
               this._gres_css = "gres_f_";
           } else {
               this._lineIdx ++;
+              this._gres_css = "gres_";
           }
           
           this._playLines ++;

@@ -1,5 +1,6 @@
 /* pages/krc/index.wxss */
 @import "gres.wxss";
+@import "gres_f.wxss";
 
 .wordContainer {
   display: -webkit-box;
