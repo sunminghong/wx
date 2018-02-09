@@ -11,7 +11,7 @@ var config = {
         host,
         
         // 语音识别接口
-        voiceUrl: `${host}/recite/recognize`
+        voiceUrl: `${host}/recite/recognize`,
 
         // recite上传接口
         reciteUploadUrl:`${host}/recite/upload`

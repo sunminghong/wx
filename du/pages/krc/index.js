@@ -1,6 +1,6 @@
 // pages/krc/index.js
-const read = require('read.js')
-const fmt= require('fmtwords.js')
+const poetryhelper= require('../../utils/poetryhelper.js')
+const recitehelper= require('../../utils/recitehelper.js')
 
 
 Page({
@@ -17,31 +17,25 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
-
     //let classic = "春晓\n王维\n春眠不觉晓，\n处处闻啼鸟。\n夜来风雨声，\n花落知多少。";
     //let classic = "春|晓\n王,400|维\n春|眠|不|觉|晓|，\n处|处|闻|啼|鸟|。\n夜|来|风|雨|声|，\n花|落|知|多|少|。";
-    let classic = "春|晓\n王|维\n春|眠|-|不|觉|晓|\n处|处|-|闻|啼|鸟\n夜|来|-|风|雨|声\n花|落|-|知|多|少";
-      if (classic.indexOf('|') ==-1) 
-        classic = fmt.fmtWords(classic,300)
+    let classic = "春|晓\n作|者|：|王|维\n春|眠|-|不|觉|晓|\n处|处|-|闻|啼|鸟\n夜|来|-|风|雨|声\n花|落|-|知|多|少";
 
     var self = this;
 
-    let re = new read.read(30,14,self.data,function(data) {
-        self.setData(data);
-    
-    }, function(title, author, lines){
-        self.setData({
-            title:{css:'title', da:[title]},
-            author:{css:'author', da:[author]},
-            wordLines:{css:'', da:lines}
-        })
-    }, function(){
-        console.log('play finish!!!!!!!!!');
-
+    this.poetry = new poetryhelper.PoetryHelper({
+        durPerStep:30,
+        stepPerLette:14,
+        pageData:self.data,
+        setData:function(data){self.setData(data)},
+        cb_show:self.showPoetry,
+        cb_finish:self.playFinish
     });
-    re.init(classic);
+    
+    this.ifFollow = true;
+    this.poetry.parse(classic,self.ifFollow);
 
+/*
     setTimeout(function(){
         self.setData({
             //author:{css:'author', da:[author]},
@@ -50,9 +44,16 @@ Page({
         })
         re.play(self.playFinish);
     }, 5000);
-
+*/
     console.log(self.data.ssss);
   },
+
+  showPoetry:function(begin, lines){
+        self.setData({
+            begin:begin,
+            wordLines:lines
+        })
+    },
 
   playFinish: function() {
       console.log('playFinished!!!!!!!!!!');
@@ -107,3 +108,5 @@ Page({
   
   }
 })
+
+

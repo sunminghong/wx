@@ -1,3 +1,5 @@
+const config = require('../config.js');
+
 const formatTime = date => {
   const year = date.getFullYear()
   const month = date.getMonth() + 1
@@ -15,21 +17,21 @@ const formatNumber = n => {
 }
 
 //正则判断
-function Regular(str, reg) {
+const regular =function (str, reg) {
   if (reg.test(str))
     return true;
   return false;
 }
 
 //是否为中文
-function IsChinese(str) {
+const isChinese= str => {
   var reg = /^[\u0391-\uFFE5]+$/;
   return Regular(str, reg);
 }
 
 
 //取得屏幕宽高，单位微rpx
-function getScreenWH() { 
+const getScreenWH = ()=> { 
     try {
       var res = wx.getSystemInfoSync()
       console.log(res.model)
@@ -46,8 +48,64 @@ function getScreenWH() {
 }
 
 
-module.exports = {
-  formatTime: formatTime,
-  isChinese: IsChinese,
-  getScreenWH:getScreenWH
+// 显示繁忙提示
+var showBusy = text => wx.showToast({
+    title: text,
+    icon: 'loading',
+    duration: 30000
+})
+
+// 显示成功提示
+var showSuccess = text => wx.showToast({
+    title: text,
+    icon: 'success'
+})
+
+// 显示失败提示
+var showModel = (title, content) => {
+    wx.hideToast();
+
+    wx.showModal({
+        title,
+        content: JSON.stringify(content),
+        showCancel: false
+    })
 }
+
+var showTips = tips => wx.showToast({
+    title: tips,
+    image: '/utils/warning.png',
+    duration: 2000
+})
+
+
+var uploadFile=param => {
+    if(config.enableNetwork) {
+        param['url'] = config.service.reciteUploadUrl;
+        wx.uploadFile(param)
+    } else {
+        console.log('uploadFile', formData);
+    }
+}
+
+var uploadRecognizeVoice = param => {
+    if(config.enableNetwork) {
+        param['url'] = config.service.recognizeUrl;
+        wx.uploadFile(param)
+    } else {
+        console.log('uploadFile', formData);
+    }
+}
+
+
+var setStorage =param =>{
+    wx.setStorage(param);
+}
+
+var getStorageSync = key =>{
+ return wx.getStorageSync('recites');
+}
+
+module.exports = { formatTime, isChinese, getScreenWH, showBusy, showSuccess, showModel, showTips }
+
+

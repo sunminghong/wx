@@ -1,7 +1,8 @@
 const util = require('../../utils/util.js')
 
 //春眠不觉晓，处处闻啼鸟。夜来风雨声，花落知多少。"
-
+//lyrics
+//rime
 const read = function (durPerStep, stepPerLetter, pageData, pageSetDatafn, cb_show, cb_finish) {
   this.durPerStep = durPerStep;
   this.stepPerLetter = stepPerLetter;
