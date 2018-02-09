@@ -31,10 +31,10 @@ class PoetryHelper {
     return this.pageData[key];
   }
 
-    //TODO:ifFollow 是否是跟随模式（每句显示两遍）
-    //let classic = "春晓\n王维\n春眠不觉晓，\n处处闻啼鸟。\n夜来风雨声，\n花落知多少。";
-    //let classic = "春|晓\n王,400|维\n春|眠|不|觉|晓|，\n处|处|闻|啼|鸟|。\n夜|来|风|雨|声|，\n花|落|知|多|少|。";
-    //let classic = "春|晓\n作|者|：|王|维\n春|眠|-|不|觉|晓|\n处|处|-|闻|啼|鸟\n夜|来|-|风|雨|声\n花|落|-|知|多|少";
+  //TODO:ifFollow 是否是跟随模式（每句显示两遍）
+  //let classic = "春晓\n王维\n春眠不觉晓，\n处处闻啼鸟。\n夜来风雨声，\n花落知多少。";
+  //let classic = "春|晓\n王,400|维\n春|眠|不|觉|晓|，\n处|处|闻|啼|鸟|。\n夜|来|风|雨|声|，\n花|落|知|多|少|。";
+  //let classic = "春|晓\n作|者|：|王|维\n春|眠|-|不|觉|晓|\n处|处|-|闻|啼|鸟\n夜|来|-|风|雨|声\n花|落|-|知|多|少";
   parse(classic, ifFollow, cb) {
     this.cb_show = cb || this.cb_show;
 
@@ -75,16 +75,16 @@ class PoetryHelper {
 
 
         //如果不是以上这样的词谱格式就累计时刻值
-          let dur = self.stepPerLetter;
-          if (term.length == 2) { //红/hong,300|鸟...(字/拼音,dur)
-            dur = parseInt(term[1]);
-            term[1] = off;
-          } else {
-            term.push(off);
-          }
-
-          off += dur;
+        let dur = self.stepPerLetter;
+        if (term.length == 2) { //红/hong,300|鸟...(字/拼音,dur)
+          dur = parseInt(term[1]);
+          term[1] = off;
+        } else {
           term.push(off);
+        }
+
+        off += dur;
+        term.push(off);
 
         let z = term[0].split('/');
         if (z.length == 1)
@@ -136,30 +136,30 @@ class PoetryHelper {
 
 
 
-      let ar=[];
-      //开头数3、2、1
-      self.ldata.push([widx, '▶︎▶︎▶︎', '', off, off + self.durPerStep, lineIdx]);
-      off += self.durPerStep;
-      wcss[widx] = 0;
-      ar.push([widx,'▶︎▶︎▶︎','','linestart']);
-      widx++;
+    let ar = [];
+    //开头数3、2、1
+    self.ldata.push([widx, '▶︎▶︎▶︎', '', off, off + self.durPerStep, lineIdx]);
+    off += self.durPerStep;
+    wcss[widx] = 0;
+    ar.push([widx, '▶︎▶︎▶︎', '', 'linestart']);
+    widx++;
 
-      self.ldata.push([widx, '▶︎▶︎▶︎', '', off, off + self.durPerStep, lineIdx]);
-      off += self.durPerStep;
-      wcss[widx] = 0;
-      ar.push([widx,'▶︎▶︎▶︎','','linestart']);
-      widx++;
+    self.ldata.push([widx, '▶︎▶︎▶︎', '', off, off + self.durPerStep, lineIdx]);
+    off += self.durPerStep;
+    wcss[widx] = 0;
+    ar.push([widx, '▶︎▶︎▶︎', '', 'linestart']);
+    widx++;
 
-      self.ldata.push([widx, '▶︎▶︎▶︎', '', off, off + self.durPerStep, lineIdx]);
-      off += self.durPerStep;
-      wcss[widx] = 0;
-      ar.push([widx,'▶︎▶︎▶︎','','linestart']);
-      widx++;
+    self.ldata.push([widx, '▶︎▶︎▶︎', '', off, off + self.durPerStep, lineIdx]);
+    off += self.durPerStep;
+    wcss[widx] = 0;
+    ar.push([widx, '▶︎▶︎▶︎', '', 'linestart']);
+    widx++;
 
-      begin.push({css:"begin", term:ar})
+    begin.push({ css: "begin", term: ar })
 
 
-    for (let i=0; i< llslen; i++) {
+    for (let i = 0; i < llslen; i++) {
       let line = lls[i];
       if (line == "") continue;
 
@@ -167,16 +167,16 @@ class PoetryHelper {
       off = ret[0];
 
       if (i == 0)
-        lines.push({css:"title", term:ret[1][0]});
+        lines.push({ css: "title", term: ret[1][0] });
       else if (i == 1)
-        lines.push({css:"author", term:ret[1][0]});
+        lines.push({ css: "author", term: ret[1][0] });
       else {
         for (var jj in ret[1])
-            lines.push({css:"", term:ret[1][jj]});
+          lines.push({ css: "", term: ret[1][jj] });
       }
 
       if (ifFollow) {
-          i--;
+        i--;
       }
     }
 
