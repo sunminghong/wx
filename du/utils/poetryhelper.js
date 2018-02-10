@@ -141,23 +141,19 @@ class PoetryHelper {
 
     let row = [];
     let ar = [];
-    //开头数3、2、1
-    row.push([widx, '▶︎', '', off, off + self.durPerStep, lineIdx]);
-    off += self.durPerStep;
-    wcss[widx] = 0;
-    ar.push([widx, '3', '', self._defaultWordCss]);
-    widx++;
+    for(let i=0;i<3;i++) {
+        //开头数3、2、1
+        row.push([widx, '▶︎', '', off, off + self.stepPerLetter, lineIdx]);
+        off += self.stepPerLetter;
+        wcss[widx] = 0;
+        ar.push([widx, 3-i, '', self._defaultWordCss]);
+        widx++;
+    }
 
-    row.push([widx, '▶︎', '', off, off + self.durPerStep, lineIdx]);
-    off += self.durPerStep;
+    //每一行结束是否增加一些延时（停顿）。
+    row.push([widx, '', '', off, off + self.lineStopStep, lineIdx]);
+    off += self.lineStopStep;
     wcss[widx] = 0;
-    ar.push([widx, '2', '', self._defaultWordCss]);
-    widx++;
-
-    row.push([widx, '▶︎', '', off, off + self.durPerStep, lineIdx]);
-    off += self.durPerStep;
-    wcss[widx] = 0;
-    ar.push([widx, '1', '', self._defaultWordCss]);
     widx++;
 
     this.ldata.push(row);

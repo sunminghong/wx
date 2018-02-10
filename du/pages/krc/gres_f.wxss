@@ -1,101 +1,101 @@
-.text .gres_f_0{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 0%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_1{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 1%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_2{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 2%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_3{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 3%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_4{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 4%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_5{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 5%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_6{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 6%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_7{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 7%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_8{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 8%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_9{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 9%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_10{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 10%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_11{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 11%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_12{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 12%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_13{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 13%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_14{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 14%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_15{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 15%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_16{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 16%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_17{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 17%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_18{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 18%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_19{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 19%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_20{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 20%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_21{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 21%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_22{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 22%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_23{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 23%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_24{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 24%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_25{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 25%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_26{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 26%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_27{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 27%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_28{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 28%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_29{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 29%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_30{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 30%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_31{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 31%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_32{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 32%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_33{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 33%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_34{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 34%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_35{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 35%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_36{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 36%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_37{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 37%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_38{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 38%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_39{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 39%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_40{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 40%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_41{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 41%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_42{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 42%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_43{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 43%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_44{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 44%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_45{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 45%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_46{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 46%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_47{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 47%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_48{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 48%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_49{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 49%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_50{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 50%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_51{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 51%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_52{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 52%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_53{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 53%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_54{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 54%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_55{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 55%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_56{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 56%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_57{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 57%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_58{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 58%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_59{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 59%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_60{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 60%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_61{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 61%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_62{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 62%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_63{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 63%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_64{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 64%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_65{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 65%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_66{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 66%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_67{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 67%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_68{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 68%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_69{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 69%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_70{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 70%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_71{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 71%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_72{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 72%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_73{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 73%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_74{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 74%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_75{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 75%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_76{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 76%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_77{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 77%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_78{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 78%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_79{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 79%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_80{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 80%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_81{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 81%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_82{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 82%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_83{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 83%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_84{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 84%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_85{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 85%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_86{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 86%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_87{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 87%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_88{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 88%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_89{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 89%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_90{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 90%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_91{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 91%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_92{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 92%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_93{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 93%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_94{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 94%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_95{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 95%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_96{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 96%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_97{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 97%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_98{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 98%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_99{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 99%, #f00 0%); -webkit-background-clip:text; }
-.text .gres_f_100{ background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),-webkit-linear-gradient(left, #0f0 100%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_0{ background:-webkit-linear-gradient(left, #0f0 0%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_1{ background:-webkit-linear-gradient(left, #0f0 1%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_2{ background:-webkit-linear-gradient(left, #0f0 2%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_3{ background:-webkit-linear-gradient(left, #0f0 3%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_4{ background:-webkit-linear-gradient(left, #0f0 4%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_5{ background:-webkit-linear-gradient(left, #0f0 5%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_6{ background:-webkit-linear-gradient(left, #0f0 6%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_7{ background:-webkit-linear-gradient(left, #0f0 7%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_8{ background:-webkit-linear-gradient(left, #0f0 8%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_9{ background:-webkit-linear-gradient(left, #0f0 9%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_10{ background:-webkit-linear-gradient(left, #0f0 10%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_11{ background:-webkit-linear-gradient(left, #0f0 11%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_12{ background:-webkit-linear-gradient(left, #0f0 12%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_13{ background:-webkit-linear-gradient(left, #0f0 13%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_14{ background:-webkit-linear-gradient(left, #0f0 14%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_15{ background:-webkit-linear-gradient(left, #0f0 15%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_16{ background:-webkit-linear-gradient(left, #0f0 16%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_17{ background:-webkit-linear-gradient(left, #0f0 17%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_18{ background:-webkit-linear-gradient(left, #0f0 18%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_19{ background:-webkit-linear-gradient(left, #0f0 19%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_20{ background:-webkit-linear-gradient(left, #0f0 20%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_21{ background:-webkit-linear-gradient(left, #0f0 21%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_22{ background:-webkit-linear-gradient(left, #0f0 22%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_23{ background:-webkit-linear-gradient(left, #0f0 23%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_24{ background:-webkit-linear-gradient(left, #0f0 24%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_25{ background:-webkit-linear-gradient(left, #0f0 25%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_26{ background:-webkit-linear-gradient(left, #0f0 26%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_27{ background:-webkit-linear-gradient(left, #0f0 27%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_28{ background:-webkit-linear-gradient(left, #0f0 28%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_29{ background:-webkit-linear-gradient(left, #0f0 29%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_30{ background:-webkit-linear-gradient(left, #0f0 30%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_31{ background:-webkit-linear-gradient(left, #0f0 31%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_32{ background:-webkit-linear-gradient(left, #0f0 32%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_33{ background:-webkit-linear-gradient(left, #0f0 33%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_34{ background:-webkit-linear-gradient(left, #0f0 34%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_35{ background:-webkit-linear-gradient(left, #0f0 35%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_36{ background:-webkit-linear-gradient(left, #0f0 36%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_37{ background:-webkit-linear-gradient(left, #0f0 37%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_38{ background:-webkit-linear-gradient(left, #0f0 38%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_39{ background:-webkit-linear-gradient(left, #0f0 39%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_40{ background:-webkit-linear-gradient(left, #0f0 40%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_41{ background:-webkit-linear-gradient(left, #0f0 41%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_42{ background:-webkit-linear-gradient(left, #0f0 42%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_43{ background:-webkit-linear-gradient(left, #0f0 43%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_44{ background:-webkit-linear-gradient(left, #0f0 44%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_45{ background:-webkit-linear-gradient(left, #0f0 45%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_46{ background:-webkit-linear-gradient(left, #0f0 46%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_47{ background:-webkit-linear-gradient(left, #0f0 47%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_48{ background:-webkit-linear-gradient(left, #0f0 48%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_49{ background:-webkit-linear-gradient(left, #0f0 49%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_50{ background:-webkit-linear-gradient(left, #0f0 50%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_51{ background:-webkit-linear-gradient(left, #0f0 51%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_52{ background:-webkit-linear-gradient(left, #0f0 52%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_53{ background:-webkit-linear-gradient(left, #0f0 53%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_54{ background:-webkit-linear-gradient(left, #0f0 54%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_55{ background:-webkit-linear-gradient(left, #0f0 55%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_56{ background:-webkit-linear-gradient(left, #0f0 56%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_57{ background:-webkit-linear-gradient(left, #0f0 57%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_58{ background:-webkit-linear-gradient(left, #0f0 58%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_59{ background:-webkit-linear-gradient(left, #0f0 59%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_60{ background:-webkit-linear-gradient(left, #0f0 60%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_61{ background:-webkit-linear-gradient(left, #0f0 61%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_62{ background:-webkit-linear-gradient(left, #0f0 62%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_63{ background:-webkit-linear-gradient(left, #0f0 63%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_64{ background:-webkit-linear-gradient(left, #0f0 64%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_65{ background:-webkit-linear-gradient(left, #0f0 65%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_66{ background:-webkit-linear-gradient(left, #0f0 66%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_67{ background:-webkit-linear-gradient(left, #0f0 67%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_68{ background:-webkit-linear-gradient(left, #0f0 68%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_69{ background:-webkit-linear-gradient(left, #0f0 69%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_70{ background:-webkit-linear-gradient(left, #0f0 70%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_71{ background:-webkit-linear-gradient(left, #0f0 71%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_72{ background:-webkit-linear-gradient(left, #0f0 72%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_73{ background:-webkit-linear-gradient(left, #0f0 73%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_74{ background:-webkit-linear-gradient(left, #0f0 74%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_75{ background:-webkit-linear-gradient(left, #0f0 75%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_76{ background:-webkit-linear-gradient(left, #0f0 76%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_77{ background:-webkit-linear-gradient(left, #0f0 77%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_78{ background:-webkit-linear-gradient(left, #0f0 78%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_79{ background:-webkit-linear-gradient(left, #0f0 79%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_80{ background:-webkit-linear-gradient(left, #0f0 80%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_81{ background:-webkit-linear-gradient(left, #0f0 81%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_82{ background:-webkit-linear-gradient(left, #0f0 82%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_83{ background:-webkit-linear-gradient(left, #0f0 83%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_84{ background:-webkit-linear-gradient(left, #0f0 84%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_85{ background:-webkit-linear-gradient(left, #0f0 85%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_86{ background:-webkit-linear-gradient(left, #0f0 86%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_87{ background:-webkit-linear-gradient(left, #0f0 87%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_88{ background:-webkit-linear-gradient(left, #0f0 88%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_89{ background:-webkit-linear-gradient(left, #0f0 89%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_90{ background:-webkit-linear-gradient(left, #0f0 90%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_91{ background:-webkit-linear-gradient(left, #0f0 91%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_92{ background:-webkit-linear-gradient(left, #0f0 92%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_93{ background:-webkit-linear-gradient(left, #0f0 93%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_94{ background:-webkit-linear-gradient(left, #0f0 94%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_95{ background:-webkit-linear-gradient(left, #0f0 95%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_96{ background:-webkit-linear-gradient(left, #0f0 96%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_97{ background:-webkit-linear-gradient(left, #0f0 97%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_98{ background:-webkit-linear-gradient(left, #0f0 98%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_99{ background:-webkit-linear-gradient(left, #0f0 99%, #f00 0%); -webkit-background-clip:text; }
+.text .gres_f_100{ background:-webkit-linear-gradient(left, #0f0 100%, #f00 0%); -webkit-background-clip:text; }
