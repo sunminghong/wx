@@ -26,13 +26,18 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 1,
 			"list": [
 				{
 					"id": -1,
 					"name": "krc",
 					"pathName": "pages/krc/index",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "welcome",
+					"pathName": "pages/welcome/welcome"
 				}
 			]
 		}

@@ -1,1 +1,17 @@
 /* pages/welcome/welcome.wxss */
+
+
+
+.word1 {
+  position: relative;
+background-image:url(http://106.75.146.42/images/hanz.png);
+
+
+
+  -webkit-background-clip:inherit;
+ -webkit-text-fill-color: transparent;
+
+  width:250rpx;
+  height:250rpx;
+}
+

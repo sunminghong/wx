@@ -1,5 +1,7 @@
 <!--pages/welcome/welcome.wxml-->
 
 <view class="container">
-    <img src="../../images/readbook.jpeg" />
+    <image src="../../images/readbook2.jpg" /> 
+
+    <image class="word1"></image>
 </view>
