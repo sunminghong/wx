@@ -6,8 +6,8 @@ const util = require('util.js')
 class PoetryHelper {
 
   constructor(param) {
-    this.durPerStep = param.durPerStep;
-    this.stepPerLetter = param.stepPerLetter;
+    this.durPerStep = 30 | param.durPerStep || 30;
+    this.stepPerLetter = param.stepPerLetter || 14;
     this.pageData = param.pageData;
     this._setData = param.fn_pageSetData;
 
@@ -20,14 +20,13 @@ class PoetryHelper {
     //每个休止符等于多少个step，默认约16*30 ms，
     this.stopCharStep = 16;
 
-      this._gres_css= "gres_";
-
     this._defaultWordCss = "word";
 
     //存放解析好的文字播放数据
     this.ldata = [];
 
     this._pIdx = 0;
+    this._gres_css = "";
     this.termStepCount = 0;
   }
 
@@ -146,19 +145,19 @@ class PoetryHelper {
     row.push([widx, '▶︎', '', off, off + self.durPerStep, lineIdx]);
     off += self.durPerStep;
     wcss[widx] = 0;
-    ar.push([widx, '▶︎', '', self._defaultWordCss]);
+    ar.push([widx, '3', '', self._defaultWordCss]);
     widx++;
 
     row.push([widx, '▶︎', '', off, off + self.durPerStep, lineIdx]);
     off += self.durPerStep;
     wcss[widx] = 0;
-    ar.push([widx, '▶︎', '', self._defaultWordCss]);
+    ar.push([widx, '2', '', self._defaultWordCss]);
     widx++;
 
     row.push([widx, '▶︎', '', off, off + self.durPerStep, lineIdx]);
     off += self.durPerStep;
     wcss[widx] = 0;
-    ar.push([widx, '▶︎', '', self._defaultWordCss]);
+    ar.push([widx, '1', '', self._defaultWordCss]);
     widx++;
 
     this.ldata.push(row);
@@ -182,7 +181,7 @@ class PoetryHelper {
       }
     }
 
-    this.wcss = wcss;
+    this._wcss = wcss;
     this._setData({
       "wcss": wcss
     });
@@ -217,7 +216,7 @@ class PoetryHelper {
       //播放到第几行了
     this._lineIdx = 0;
       //总播放了多少行;
-    this._playLines = 0;
+    this._playLines = -1;
 
     //帧计数
     this._stepCount = 0;
@@ -234,13 +233,14 @@ class PoetryHelper {
     let termStep = term[4] - term[3];
     let ppp = parseInt(this.termStepCount * 100 / termStep);
 
-    //let data = this._getData("wcss");
-    this.wcss[term[0]] = this._gres_css + (ppp < 20 ? 20 : ppp);
-
-    this._setData({
-      wcss: this.wcss 
-    })
-
+    let css = this._gres_css + (ppp < 20 ? 20 : ppp)
+      if (css != this._wcss[term[0]]) {
+        this._wcss[term[0]] = css;
+        //console.log(this._lineIdx, this._pIdx, this._gres_css + (ppp < 20 ? 20 : ppp));
+        this._setData({
+          wcss: this._wcss 
+        })
+      }
     if (this.termStepCount == termStep) {
       this.termStepCount = 0;
       this._pIdx++;
@@ -248,11 +248,11 @@ class PoetryHelper {
         //换下一行
       if (this._pIdx >= this.ldata[this._lineIdx].length) {
           //如果是跟读模式应该读两遍
-          if (this.ifFollow && this._playLines % 2 == 0) {
-              this._gres_css = "gres_f_";
+          if (this._playLines>-1 && this.ifFollow && this._playLines % 2 == 0) {
+              this._gres_css = "f_";
           } else {
               this._lineIdx ++;
-              this._gres_css = "gres_";
+              this._gres_css = "";
           }
           
           this._playLines ++;
@@ -285,7 +285,7 @@ class PoetryHelper {
   }
 
   clearProgress() {
-      let wcss = this.wcss;
+      let wcss = this._wcss;
 
       for(let i in wcss) {
           wcss[i]=0;
