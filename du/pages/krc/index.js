@@ -26,6 +26,7 @@ Page({
     peotryInputHeight:0,
 
         s_poetry : "",
+      samplePoetry:"",
   },
 
 
@@ -39,10 +40,13 @@ Page({
     let hh = wh[1];
       this.hh = hh;
 
+     let s ="春|晓\n作|者|：|王|维\n春|眠|-|不|觉|晓\n处|处|-|闻|啼|鸟\n夜|来|-|风|雨|声\n花|落|-|知|多|少";
+
         this.setData({
             scene: "input",
             peotryInputHeight: hh - 150 - 30,
-            poetryHeight:hh - 150 - 30
+            poetryHeight:hh - 150 - 30,
+            samplePoetry: s
         });
     this.enterInputScene();
 
@@ -67,6 +71,7 @@ Page({
     //let classic = "春晓\n王维\n春眠不觉晓，\n处处闻啼鸟。\n夜来风雨声，\n花落知多少。";
     //let classic = "春|晓\n王,400|维\n春|眠|不|觉|晓|，\n处|处|闻|啼|鸟|。\n夜|来|风|雨|声|，\n花|落|知|多|少|。";
     //let classic = "春|晓\n作|者|：|王|维\n春|眠|-|不|觉|晓|\n处|处|-|闻|啼|鸟\n夜|来|-|风|雨|声\n花|落|-|知|多|少";
+
 
 
     var self = this;

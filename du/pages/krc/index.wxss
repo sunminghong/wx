@@ -9,27 +9,23 @@
 
   font: normal normal 30rpx 微软雅黑, sans-serif;
 }
- .textarea-wrp {
+ .textarea-wrap {
     padding: 15rpx;
-    background:#ececec;
-    overflow:hidden;
              flex-direction: column;
  }
-.textarea-wrp textarea {
+.textarea-wrap textarea {
         flex:1;
     width:100%;
 }
 
 .poetry-input-body .buttons {
     border-top: 2rpx solid #ddd;
-            box-shadow: 0 0rpx 4rpx #ddd;  
+    box-shadow: 0 0rpx 4rpx #ddd;  
 }
 .poetry-input-body button {
-    height:120rpx;
-   line-height:120rpx;
-    margin:30rpx 0 0 0;
+    height:100rpx;
+   line-height:100rpx;
 }
-
 
 
 /* poetry block */

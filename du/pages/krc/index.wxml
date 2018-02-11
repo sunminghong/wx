@@ -4,11 +4,11 @@
   <view class="poetry-input-body columnbox" wx:if="{{scene == 'input'}}">
 
     <view class="columnbox-header title">
-    请输入您想要领读的诗词：
+    请按示范输入将领读的诗词：
     </view>
 
     <view class="columnbox-body textarea-wrap">
-      <textarea bindblur="textareaChange" bindconfirm="textareaChange" auto-focus="true" placeholder="" name="poetry"></textarea>
+      <textarea bindblur="textareaChange" bindconfirm="textareaChange" auto-focus="true" placeholder="{{samplePoetry}}" name="poetry"></textarea>
 </view>
 
     <view class="columnbox-footer buttons">
