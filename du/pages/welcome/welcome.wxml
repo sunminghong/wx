@@ -1,7 +1,21 @@
 <!--pages/welcome/welcome.wxml-->
 
-<view class="container">
-    <image src="../../images/readbook2.jpg" /> 
-
-    <image class="word1"></image>
+<view class="columnbox">
+  <view class="columnbox-header">...</view>
+  <view class="columnbox-body">
+    <view class="columnbox-content">conte
+    
+    asladf
+    jhasdfjasldfkjas;lkdjfalsdjfkasldjfk
+    sdkjfasl;dfjkas;ldfjk
+    alsdfjasldfjas;dfjasdhjf
+    
+    
+    
+    nt</view>
+    <view class="columnbox-nav">naasdfasldfasdfv</view>
+    <view class="columnbox-ads">adsdfsdfsdfsfds</view>
+  </view>
+  <view class="columnbox-footer">saafdlsaf:w：`
+  </view>
 </view>

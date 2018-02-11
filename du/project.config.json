@@ -26,7 +26,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 0,
 			"list": [
 				{
 					"id": -1,
@@ -37,7 +37,8 @@
 				{
 					"id": -1,
 					"name": "welcome",
-					"pathName": "pages/welcome/welcome"
+					"pathName": "pages/welcome/welcome",
+					"query": ""
 				}
 			]
 		}

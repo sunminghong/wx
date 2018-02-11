@@ -1,17 +1,40 @@
 /* pages/welcome/welcome.wxss */
 
+.columnbox {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+view {
+    border:1px solid #000;
+}
+.columnbox-header, .columnbox-footer {
+  /*flex: 1;*/
+
+}
+
+.columnbox-body {
+  display: flex;
+  flex: 1;
+}
+
+.columnbox-content {
+  flex: 1;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.columnbox-nav, .columnbox-ads {
+  /* 两个边栏的宽度设为12em */
+  flex: 0 0 60rpx;
 
 
-.word1 {
-  position: relative;
-background-image:url(http://106.75.146.42/images/hanz.png);
+  word-break: break-all;
+}
 
-
-
-  -webkit-background-clip:inherit;
- -webkit-text-fill-color: transparent;
-
-  width:250rpx;
-  height:250rpx;
+.columnbox-nav {
+  /* 导航放到最左边 */
+  order: -1;
 }
 

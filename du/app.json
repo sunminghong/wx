@@ -4,12 +4,28 @@
     "pages/index/index",
     "pages/krc/index",
     "pages/login/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/mine/mine"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "早起读诗",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor":"#f00",
+    "backgroundColor":"#ff0",
+    "borderStyle":"black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "index"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的"
+      }
+    ]
   }
 }

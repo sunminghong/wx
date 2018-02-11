@@ -37,13 +37,14 @@ const getScreenWH = ()=> {
       console.log(res.model)
       console.log(res.pixelRatio)
       console.log('width:',res.windowWidth)
-      console.log(res.windowHeight)
+      console.log('height',res.windowHeight)
       console.log(res.language)
       console.log(res.version)
       console.log(res.platform)
-      return [res.pixelRatio * res.windowWidth, res.pixelRatio * res.windowHeight]
+      //return [res.pixelRatio * res.windowWidth, res.pixelRatio * res.windowHeight]
+      return [2 * res.windowWidth, 2 * res.windowHeight - 128 * (res.pixelRatio - 2)]
     } catch (e) {
-      return [750, 1334]
+      //return [750, 1334]
     }
 }
 
@@ -106,6 +107,39 @@ var getStorageSync = key =>{
  return wx.getStorageSync('recites');
 }
 
-module.exports = { formatTime, isChinese, getScreenWH, showBusy, showSuccess, showModel, showTips }
+function formatRecordTime(time) {
+  if (typeof time !== 'number' || time < 0) {
+    return time
+  }
+
+  var hour = parseInt(time / 3600)
+  time = time % 3600
+  var minute = parseInt(time / 60)
+  time = time % 60
+  var second = time
+
+  return ([hour, minute, second]).map(function (n) {
+    n = n.toString()
+    return n[1] ? n : '0' + n
+  }).join(':')
+}
+
+function formatLocation(longitude, latitude) {
+  if (typeof longitude === 'string' && typeof latitude === 'string') {
+    longitude = parseFloat(longitude)
+    latitude = parseFloat(latitude)
+  }
+
+  longitude = longitude.toFixed(2)
+  latitude = latitude.toFixed(2)
+
+  return {
+    longitude: longitude.toString().split('.'),
+    latitude: latitude.toString().split('.')
+  }
+}
+
+
+module.exports = { formatTime, formatRecordTime, formatLocation, isChinese, getScreenWH, showBusy, showSuccess, showModel, showTips }
 
 

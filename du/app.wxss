@@ -1,10 +1,53 @@
 /**app.wxss**/
 .container {
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /*align-items: center;*/
   justify-content: space-between;
   padding: 0rpx 0;
   box-sizing: border-box;
 } 
+
+
+.columnbox {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+view {
+    /*border:1px solid #000;*/
+}
+.columnbox-header, .columnbox-footer {
+  /*flex: 1;*/
+
+    padding:10rpx;
+}
+
+.columnbox-body {
+  display: flex;
+  flex: 1;
+}
+
+.columnbox-content {
+  flex: 1;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.columnbox-nav, .columnbox-ads {
+  /* 两个边栏的宽度设为12em */
+  flex: 0 0 60rpx;
+
+
+  word-break: break-all;
+}
+
+.columnbox-nav {
+  /* 导航放到最左边 */
+  order: -1;
+}
+
+
