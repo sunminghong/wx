@@ -67,13 +67,17 @@ Page({
     },
 
   enterRecordFollowScene: function(e) {
+      let self = this;
+      setTimeout(function(){
+          self._enterRecordFollow();
+      },300);
 
+  },
+
+    _enterRecordFollow:function() {
     //let classic = "春晓\n王维\n春眠不觉晓，\n处处闻啼鸟。\n夜来风雨声，\n花落知多少。";
     //let classic = "春|晓\n王,400|维\n春|眠|不|觉|晓|，\n处|处|闻|啼|鸟|。\n夜|来|风|雨|声|，\n花|落|知|多|少|。";
     //let classic = "春|晓\n作|者|：|王|维\n春|眠|-|不|觉|晓|\n处|处|-|闻|啼|鸟\n夜|来|-|风|雨|声\n花|落|-|知|多|少";
-
-
-
     var self = this;
       
 
