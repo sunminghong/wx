@@ -28,6 +28,8 @@ view {
   /*flex: 1;*/
 
     padding:10rpx;
+
+  display: flex;
 }
 
 .columnbox-body {
