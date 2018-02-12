@@ -95,6 +95,7 @@ Page({
 
     this.setData({
             scene: "recordFollow",
+            currentSwiper:1
         });
 
 /*

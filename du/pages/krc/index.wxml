@@ -1,109 +1,106 @@
 <!--pages/krc/index.wxml-->
+<view class="poetry-input-body columnbox" wx:if="{{scene == 'input'}}">
 
-
-  <view class="poetry-input-body columnbox" wx:if="{{scene == 'input'}}">
-
-    <view class="columnbox-header title">
+  <view class="columnbox-header title">
     请按示范输入将领读的诗词：
-    </view>
-
-    <view class="columnbox-body textarea-wrap">
-      <textarea bindblur="textareaChange" bindconfirm="textareaChange" auto-focus="true" placeholder="{{samplePoetry}}" name="poetry"></textarea>
-</view>
-
-    <view class="columnbox-footer buttons">
-        <button bindtap="enterRecordFollowScene">领读录制</button>
-    </view>
-
   </view>
 
+  <view class="columnbox-body textarea-wrap">
+    <textarea bindblur="textareaChange" bindconfirm="textareaChange" auto-focus="true" placeholder="{{samplePoetry}}" value="{{samplePoetry}}" name="poetry"></textarea>
+  </view>
 
-  <view wx:if="{{scene == 'recordFollow' || scene=='recordRead'}}">
-    <view class="poetry-body" bindtap="startRecord" style="height:{{poetryHeight}}rpx">
+  <view class="columnbox-footer buttons">
+    <button bindtap="enterRecordFollowScene">领读录制</button>
+  </view>
 
-      <view class="text {{begin.css}}">
-        <block wx:for="{{begin.term}}" wx:for-item="w">
+</view>
+
+<view class="columnbox">
+
+  <view class="columnbox-body poetry-body" bindtap="startRecord">
+    <view class="text {{begin.css}}">
+      <block wx:for="{{begin.term}}" wx:for-item="w">
+        <view class="{{w[3]}}" wx:if="{{w[1]!=''}}">
+          <text wx:if="{{w[2]!=''}}" class="pinyin gres_{{wcss[w[0]]}}">{{w[2]}}</text>
+          <text class="hanz gres_{{wcss[w[0]]}}">{{w[1]}}</text>
+        </view>
+      </block>
+    </view>
+
+    <block wx:for="{{wordLines}}" wx:for-item="line">
+      <view class="text {{line.css}}">
+        <block wx:for="{{line.term}}" wx:for-item="w">
           <view class="{{w[3]}}" wx:if="{{w[1]!=''}}">
             <text wx:if="{{w[2]!=''}}" class="pinyin gres_{{wcss[w[0]]}}">{{w[2]}}</text>
             <text class="hanz gres_{{wcss[w[0]]}}">{{w[1]}}</text>
           </view>
         </block>
       </view>
+    </block>
 
-      <block wx:for="{{wordLines}}" wx:for-item="line">
-        <view class="text {{line.css}}">
-          <block wx:for="{{line.term}}" wx:for-item="w">
-            <view class="{{w[3]}}" wx:if="{{w[1]!=''}}">
-              <text wx:if="{{w[2]!=''}}" class="pinyin gres_{{wcss[w[0]]}}">{{w[2]}}</text>
-              <text class="hanz gres_{{wcss[w[0]]}}">{{w[1]}}</text>
-            </view>
-          </block>
-        </view>
-      </block>
-
-    </view>
-
-
-    <view class="page-section">
-      <block wx:if="{{recording === false && playing === false && hasRecord === false}}">
-        <view class="page-body-time">
-          <text class="time-big">{{formatedRecordTime}}</text>
-        </view>
-        <view class="page-body-buttons">
-          <view class="page-body-button"></view>
-          <view class="page-body-button" bindtap="startRecord">
-            <image src="/images/record.png"></image>
-          </view>
-          <view class="page-body-button"></view>
-        </view>
-      </block>
-
-      <block wx:if="{{recording === true}}">
-        <view class="page-body-time">
-          <text class="time-big">{{formatedRecordTime}}</text>
-        </view>
-        <view class="page-body-buttons">
-          <view class="page-body-button"></view>
-          <view class="page-body-button" bindtap="stopRecord">
-            <view class="button-stop-record"></view>
-          </view>
-          <view class="page-body-button"></view>
-        </view>
-      </block>
-
-      <block wx:if="{{hasRecord === true && playing === false}}">
-        <view class="page-body-time">
-          <text class="time-big">{{formatedPlayTime}}</text>
-          <text class="time-small">{{formatedRecordTime}}</text>
-        </view>
-        <view class="page-body-buttons">
-          <view class="page-body-button"></view>
-          <view class="page-body-button" bindtap="playVoice">
-            <image src="/images/play.png"></image>
-          </view>
-          <view class="page-body-button" bindtap="clear">
-            <image src="/images/trash.png"></image>
-          </view>
-        </view>
-      </block>
-
-      <block wx:if="{{hasRecord === true && playing === true}}">
-        <view class="page-body-time">
-          <text class="time-big">{{formatedPlayTime}}</text>
-          <text class="time-small">{{formatedRecordTime}}</text>
-        </view>
-        <view class="page-body-buttons">
-          <view class="page-body-button" bindtap="stopVoice">
-            <image src="/images/stop.png"></image>
-          </view>
-          <!-- <view class="page-body-button" bindtap="pauseVoice">
-            <image src="/images/pause.png"></image>
-          </view> -->
-          <view class="page-body-button" bindtap="clear">
-            <image src="/image/trash.png"></image>
-          </view>
-        </view>
-      </block>
-    </view>
   </view>
 
+  <view class="columnbox-footer buttons">
+    <button bindtap="enterRecordFollowScene">领读录制</button>
+    
+    <block wx:if="{{recording === false && playing === false && hasRecord === false}}">
+      <view class="page-body-time">
+        <text class="time-big">{{formatedRecordTime}}</text>
+      </view>
+      <view class="page-body-buttons">
+        <view class="page-body-button"></view>
+        <view class="page-body-button" bindtap="startRecord">
+          <image src="/images/record.png"></image>
+        </view>
+        <view class="page-body-button"></view>
+      </view>
+    </block>
+
+    <block wx:if="{{recording === true}}">
+      <view class="page-body-time">
+        <text class="time-big">{{formatedRecordTime}}</text>
+      </view>
+      <view class="page-body-buttons">
+        <view class="page-body-button"></view>
+        <view class="page-body-button" bindtap="stopRecord">
+          <view class="button-stop-record"></view>
+        </view>
+        <view class="page-body-button"></view>
+      </view>
+    </block>
+
+    <block wx:if="{{hasRecord === true && playing === false}}">
+      <view class="page-body-time">
+        <text class="time-big">{{formatedPlayTime}}</text>
+        <text class="time-small">{{formatedRecordTime}}</text>
+      </view>
+      <view class="page-body-buttons">
+        <view class="page-body-button"></view>
+        <view class="page-body-button" bindtap="playVoice">
+          <image src="/images/play.png"></image>
+        </view>
+        <view class="page-body-button" bindtap="clear">
+          <image src="/images/trash.png"></image>
+        </view>
+      </view>
+    </block>
+
+    <block wx:if="{{hasRecord === true && playing === true}}">
+      <view class="page-body-time">
+        <text class="time-big">{{formatedPlayTime}}</text>
+        <text class="time-small">{{formatedRecordTime}}</text>
+      </view>
+      <view class="page-body-buttons">
+        <view class="page-body-button" bindtap="stopVoice">
+          <image src="/images/stop.png"></image>
+        </view>
+        <!-- <view class="page-body-button" bindtap="pauseVoice">
+            <image src="/images/pause.png"></image>
+          </view> -->
+        <view class="page-body-button" bindtap="clear">
+          <image src="/image/trash.png"></image>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

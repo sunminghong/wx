@@ -39,6 +39,12 @@
 					"name": "welcome",
 					"pathName": "pages/welcome/welcome",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "index",
+					"pathName": "pages/index/index",
+					"query": ""
 				}
 			]
 		}

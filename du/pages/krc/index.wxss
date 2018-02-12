@@ -2,6 +2,10 @@
 @import "gres.wxss";
 @import "gres_f.wxss";
 
+swiper {
+  height: 100vh;
+}
+
 /* input block */
 
 .poetry-input-body .title {
