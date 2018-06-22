@@ -1,0 +1,12 @@
+.buildpath
+.project
+.idea/
+.tags
+.tags_sorted_by_file
+/trunk/application/config
+/trunk/application/cache/cmsSetting
+/trunk/application/cache
+/trunk/www/upload
+/trunk/*.pyc
+/trunk/conf/*.conf
+/trunk/conf

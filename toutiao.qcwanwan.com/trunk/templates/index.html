@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>安锋头条</title>
+    <link href="/static/libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="/static/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+     <link rel="stylesheet" href="/static/libs/mescroll/mescroll.css">
+    <link rel="stylesheet" href="/static/css/index.css">
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <header>
+            <div class="container">
+                <div class="col-md-2 col-xs-2 col-sm-2 text-left">
+                    {% if 'uid' not in session %}
+                        <i class="fa fa-user fa-fw"></i>
+                    {% else %}
+                        <img src="{{session['user']['avatar']}}" class="img-circle photo">
+                    {% endif %}
+                </div>
+                <div class="col-md-8 col-xs-8 col-sm-8 text-center">
+                    安锋头条
+                </div>
+                <div class="col-md-2 col-xs-2 col-sm-2 text-right" onclick="window.location.href='/config';">
+                    <i class="fa fa-cog fa-fw"></i>
+                </div>
+            </div>
+        </header>
+        <!-- <nav class="scroll_nav">
+            <div class="n_left">
+                <a href="#home">热门</a>
+                <a href="#news">科技</a>
+                <a href="#friends">财经</a>
+                <a href="#partners">汽车</a>
+            </div>
+            <div class="n_right" onclick="window.location.href='/config';">+</div>
+        </nav> -->
+    </nav>
+    <div class="container mescroll" id="mescroll">
+        <div class="col-md-12 col-xs-12 col-sm-12" id="data_list">
+        </div>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/static/libs/mescroll/mescroll.min.js"></script>
+    <script src="/static/js/app.js"></script>
+    <script type="text/javascript">
+
+       var mescroll = new MeScroll("mescroll", { //第一个参数"mescroll"对应上面布局结构div的id
+            //解析: down.callback默认调用mescroll.resetUpScroll(),而resetUpScroll会将page.num=1,再触发up.callback
+            down: {
+                callback: downCallback
+            },
+            up: {
+                auto: false, //默认初始化后不上拉加载,只执行下拉加载
+                callback: upCallback , //上拉加载的回调
+                isBounce: false, //如果您的项目是在iOS的微信,QQ,Safari等浏览器访问的,建议配置此项.解析(必读)
+                toTop:{
+                    src: '/static/img/mescroll-totop.png', //默认滚动到1000px显示,可配置offset修改
+                    offset : 500
+                }
+            }
+        });
+
+        function downCallback() {
+           var params = {};
+            app.load_data_post("?page=0", params, function(res) {
+                
+                mescroll.endSuccess();
+                setData(res, false);
+                
+            }, function() {
+                mescroll.endErr();
+            });
+
+        }
+
+        function upCallback(args) {
+            var params = {};
+            app.load_data_post("?page=" + args.num, params, function(res) {
+                
+                mescroll.endSuccess(res.data.length);
+                setData(res, true);
+
+            }, function() {
+                mescroll.endErr();
+            });
+
+        }
+        
+        function setData(res, isAppend) {
+            var data = res.data;
+            var tpl = '';
+            if (res.code == 1 && data.length > 0) {
+                for ( var i = 0; i < data.length; i++) {
+                    tpl += '<div class="col-md-12 col-xs-12 col-sm-12 list-item">'+
+                            '<h5><a href="/'+ data[i]['id'] +'">'+ data[i]['title'] +'</a></h5>'+
+                            '<p>'+data[i]['mname']+'&nbsp;&nbsp;'+data[i]['create_time']+'</p>'+
+                        '</div>';
+                }
+            } else {
+                mescroll.endErr();
+            }
+
+            if (isAppend) {
+                $('#data_list').append(tpl);
+            } else{
+                $('#data_list').html(tpl);
+            }
+        }
+    </script>
+</body>
+</html>

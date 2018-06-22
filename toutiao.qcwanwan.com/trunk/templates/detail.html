@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>{{ result['title'] }}</title>
+    <link href="/static/libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="/static/libs//bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/static/css/index.css">
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <header>
+            <div class="container">
+                <div class="col-md-2 col-xs-2 col-sm-2" onclick="location.href='/';">
+                    <i class="fa fa-angle-left fa-fw"></i>
+                </div>
+                <div class="col-md-8 col-xs-8 col-sm-8">
+                    {{ result['mname'] }}
+                </div>
+                <div class="col-md-2 col-xs-2 col-sm-2 text-right">
+                    <!-- <i class="fa fa-ellipsis-h fa-fw"></i> -->
+                </div>
+            </div>
+        </header>
+    </nav>
+    <div class="container" style="margin-top: 60px;">
+        <h4><strong>{{ result['title'] }}</strong></h4>
+        <p class="time">( 来源: {{ result['mname'] }}) {{ result['create_time'] }}</p>
+        <p><a href="{{result['origin_url']}}" target="_blank">查看原文</a></p>
+        <div class="col-md-12 col-xs-12 col-sm-12 content">
+            {{ result['content']|safe }}
+        </div>
+        <div class="col-md-12 col-xs-12 col-sm-12" style="margin-bottom: 20px; padding-left: 0px;">
+             <nav>
+                <ul class="pager">
+                    {% if prev != 0 %}
+                    <li><a href="/{{ prev }}">上一篇</a></li>
+                    {% endif %}
+                    {% if next != 0 %}
+                    <li><a href="/{{ next }}">下一篇</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </div>
+    </div>
+</body>
+</html>
