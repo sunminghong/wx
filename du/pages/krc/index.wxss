@@ -37,12 +37,13 @@ swiper {
 /* poetry block */
 
 .poetry-body {
-  display: -webkit-box;
+  /*display: -webkit-box;*/
   -webkit-box-orient: vertical;
   -webkit-box-align: center;
   margin: 5px;
   padding: 5px;
   -webkit-user-select: none;
+  float:right;
 }
 
 .voice-body {
@@ -51,11 +52,13 @@ swiper {
 .text {
   position: relative;
   top: 8px;
-  display: flex;
+  display: block;
   -webkit-box-orient: horizontal;
   -webkit-box-align: center;
   font: normal normal bold 60rpx 微软雅黑, sans-serif;
   filter: brightness(2);
+  width:40px;
+
 }
 
 .begin {
@@ -126,9 +129,9 @@ swiper {
    voice block
    */
 
-image {
-  width: 150rpx;
-  height: 150rpx;
+image.record-button {
+  width: 75rpx;
+  height: 75rpx;
 }
 
 /*

@@ -15,7 +15,7 @@
 
 </view>
 
-<view class="columnbox">
+<view class="poetry-input-body columnbox"  wx:if="{{scene == 'recordFollow' || scene=='recordRead'}}">
 
   <view class="columnbox-body poetry-body" bindtap="startRecord">
     <view class="text {{begin.css}}">
@@ -40,11 +40,13 @@
 
   </view>
 
-  <view class="columnbox-footer">
-    <button bindtap="enterRecordFollowScene">领读录制</button>
-    <button bindtap="enterRecordFollowScene">领读录制</button>
-        <view class="page-body-button" bindtap="startRecord">
-          <image src="/images/record.png"></image>
-        </view>
+  <view class="columnbox-footer record-buttons">
+    <button bindtap="enterInputScene">诗词内容</button>
+    <button bindtap="startRecordFollow">
+    <image class="record-button" src="{{record_follow_icon}}"></image>
+    跟读录制</button>
+    <button bindtap="startRecord">
+    <image class="record-button" src="{{record_icon}}"></image>
+    领读录制</button>
   </view>
 </view>

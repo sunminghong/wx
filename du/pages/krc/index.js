@@ -13,8 +13,8 @@ Page({
    */
   data: {
     ssss:"sssssssssssssssssssssssssss",
-      wcss:{},
-          recording: false,
+    wcss:{},
+    recording: false,
     playing: false,
     hasRecord: false,
     recordTime: 0,
@@ -22,11 +22,14 @@ Page({
     formatedRecordTime: '00:00:00',
     formatedPlayTime: '00:00:00',
 
-      scene: "input",
+    scene: "input",
     peotryInputHeight:0,
 
-        s_poetry : "",
-      samplePoetry:"",
+    record_icon:"/images/record.png",
+    record_follow_icon:"/images/record.png",
+
+    s_poetry : "",
+    samplePoetry:"",
   },
 
 
@@ -34,30 +37,35 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+      this.enterInputScene();
+  },
 
-    let wh = util.getScreenWH();
-    let ww = wh[0];
-    let hh = wh[1];
-      this.hh = hh;
+    enterScene: function(scene) {
+        this.setData({
+            scene: scene
+        })
+    },
 
-     let s ="春|晓\n作|者|：|王|维\n春|眠|-|不|觉|晓\n处|处|-|闻|啼|鸟\n夜|来|-|风|雨|声\n花|落|-|知|多|少";
+    enterInputScene: function(){
+        this.isRecord = false;
+        this.stopRecord();
+
+        let wh = util.getScreenWH();
+        let ww = wh[0];
+        let hh = wh[1];
+        this.hh = hh;
+
+        let s ="春|晓\n作|者|：|王|维\n春|眠|-|不|觉|晓\n处|处|-|闻|啼|鸟\n夜|来|-|风|雨|声\n花|落|-|知|多|少";
 
         this.setData({
-            scene: "input",
             peotryInputHeight: hh - 150 - 30,
             poetryHeight:hh - 150 - 30,
             samplePoetry: s
         });
-    this.enterInputScene();
 
-  console.log(hh, this.data.peotryInputHeight);
-  },
+        this.enterScene("input")
 
-    switchScene: function() {
-        this._enterScenes[this.scene]();
-    },
-
-    enterInputScene: function(){
+        console.log(hh, this.data.peotryInputHeight);
 
     },
 
@@ -66,52 +74,42 @@ Page({
 
     },
 
-  enterRecordFollowScene: function(e) {
+    enterRecordFollowScene: function(e) {
       let self = this;
+
+      this.isRecord = false;
+
       setTimeout(function(){
           self._enterRecordFollow();
       },300);
 
-  },
+    },
 
     _enterRecordFollow:function() {
-    //let classic = "春晓\n王维\n春眠不觉晓，\n处处闻啼鸟。\n夜来风雨声，\n花落知多少。";
-    //let classic = "春|晓\n王,400|维\n春|眠|不|觉|晓|，\n处|处|闻|啼|鸟|。\n夜|来|风|雨|声|，\n花|落|知|多|少|。";
-    //let classic = "春|晓\n作|者|：|王|维\n春|眠|-|不|觉|晓|\n处|处|-|闻|啼|鸟\n夜|来|-|风|雨|声\n花|落|-|知|多|少";
-    var self = this;
-      
+        //let classic = "春晓\n王维\n春眠不觉晓，\n处处闻啼鸟。\n夜来风雨声，\n花落知多少。";
+        //let classic = "春|晓\n王,400|维\n春|眠|不|觉|晓|，\n处|处|闻|啼|鸟|。\n夜|来|风|雨|声|，\n花|落|知|多|少|。";
+        //let classic = "春|晓\n作|者|：|王|维\n春|眠|-|不|觉|晓|\n处|处|-|闻|啼|鸟\n夜|来|-|风|雨|声\n花|落|-|知|多|少";
+        var self = this;
+          
 
-    this.poetry = new poetryhelper.PoetryHelper({
-        durPerStep:30,
-        stepPerLetter:14,
-        pageData:self.data,
-        fn_pageSetData:function(data){self.setData(data)},
-        cb_show:self.showPoetry,
-        cb_finish:self.playFinish
-    });
-    
-    this.ifFollow = true;
-    this.poetry.parse(this.s_poetry);
-
-    this.setData({
-            scene: "recordFollow",
-            currentSwiper:1
+        this.poetry = new poetryhelper.PoetryHelper({
+            durPerStep:30,
+            stepPerLetter:14,
+            pageData:self.data,
+            fn_pageSetData:function(data){self.setData(data)},
+            cb_show:self.showPoetry,
+            cb_finish:self.playFinish
         });
 
-/*
-    setTimeout(function(){
-        self.setData({
-            //author:{css:'author', da:[author]},
-            ssss:11111111,
-            //wcss:[["gres_30","gres_60"]]
-        })
-        re.play(self.playFinish);
-    }, 5000);
-*/
-    console.log(self.data.ssss);
-  },
+        this.ifFollow = true;
+        this.poetry.parse(this.s_poetry,true);
 
-  showPoetry:function(begin, lines){
+        this.enterScene("recordFollow");
+
+        console.log(self.data.ssss);
+    },
+
+    showPoetry:function(begin, lines){
         this.setData({
             begin:begin,
             wordLines:lines
@@ -119,11 +117,20 @@ Page({
     },
 
   startRecord: function(e) {
+      if (this.isRecord) {
+          this.stopRecord();
+          return
+      }
+
+      this.isRecord = true;
+      console.log('ifFollow:',this.ifFollow);
+      this.startRecordVoice();
       this.poetry.play(this.ifFollow);
   },
 
   playFinish: function() {
       console.log('playFinished!!!!!!!!!!');
+      this.stopRecord();
   },
 
   /**
@@ -182,7 +189,7 @@ Page({
       this.stopRecordUnexpectedly()
     }
   },
-  startRecord: function () {
+  startRecordVoice: function () {
     this.setData({ recording: true })
 
     var that = this
@@ -208,7 +215,10 @@ Page({
     })
   },
   stopRecord: function() {
-    wx.stopRecord()
+        this.isRecord = false;
+        this.poetry.pause();
+
+        wx.stopRecord()
   },
   stopRecordUnexpectedly: function () {
     var that = this

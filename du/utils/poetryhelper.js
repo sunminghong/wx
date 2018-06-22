@@ -28,6 +28,9 @@ class PoetryHelper {
     this._pIdx = 0;
     this._gres_css = "";
     this.termStepCount = 0;
+
+    //是否垂直方向，默认是水平方向
+    this.ifVertical = false;
   }
 
   _getData(key) {
@@ -37,9 +40,21 @@ class PoetryHelper {
   //let classic = "春晓\n王维\n春眠不觉晓，\n处处闻啼鸟。\n夜来风雨声，\n花落知多少。";
   //let classic = "春|晓\n王,400|维\n春|眠|不|觉|晓|，\n处|处|闻|啼|鸟|。\n夜|来|风|雨|声|，\n花|落|知|多|少|。";
   //let classic = "春|晓\n作|者|：|王|维\n春|眠|-|不|觉|晓|\n处|处|-|闻|啼|鸟\n夜|来|-|风|雨|声\n花|落|-|知|多|少";
-  parse(classic, cb) {
-    this.cb_show = cb || this.cb_show;
+  parse(classic, ifVertical ,cb) {
+    
+    if (ifVertical!=null) {
+      if (typeof(ifVertical) == 'function') {
+        this.cb_show = ifVertical;
+        this.ifVertical = false;
+      } else {
+        this.cb_show = cb || this.cb_show;
+        this.ifVertical = ifVertical;
+      }
+    } else {
+      this.cb_show = cb || this.cb_show;
+    }
 
+console.log(classic);
     let off = 0;
     let dur = 0;
 
@@ -47,6 +62,8 @@ class PoetryHelper {
     let ww = wh[0];
     let hh = wh[1];
     let termsPerline = parseInt(ww / 90);
+    if(this.ifVertical)
+      termsPerline = parseInt(hh / 90);
 
     //第多少个字
     let widx = 0;
@@ -132,7 +149,6 @@ class PoetryHelper {
     }
 
     let lls = classic.split('\n');
-    console.log(lls);
 
     let lines = [];
     let llslen = lls.length;
