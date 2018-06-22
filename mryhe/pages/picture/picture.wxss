@@ -1,0 +1,6 @@
+.content{
+  font-size:30rpx
+}
+.date{
+  font-size:25rpx;
+}
